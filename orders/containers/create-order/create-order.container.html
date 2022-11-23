@@ -1,0 +1,35 @@
+<form [formGroup]="orderForm" (ngSubmit)="submit()">
+  <h2>Customer info</h2>
+
+  <formpart label="Company name">
+    <input type="text" />
+  </formpart>
+  <formpart label="Email">
+    <input type="text" />
+  </formpart>
+  <formpart label="Phone number">
+    <input type="text" />
+  </formpart>
+
+  <h2>Machines <a (click)="addMachine()">+</a></h2>
+
+  <div class="machine-row">
+    <formpart label="Machine types">
+      <select>
+        <option>Scissor lift</option>
+        <option>Telehandler</option>
+        <option>Transporter</option>
+      </select>
+    </formpart>
+    <formpart label="Amount">
+      <input type="text" />
+    </formpart>
+    <a (click)="deleteMachine()">Delete</a>
+  </div>
+  <br />
+  <input type="submit" value="Place order" />
+</form>
+
+<pre class="result" *ngIf="result">
+{{result | json}}
+</pre>

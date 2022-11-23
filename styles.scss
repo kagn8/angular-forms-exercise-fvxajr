@@ -1,0 +1,63 @@
+$color-action: #00aada;
+$color-dark: #53535C;
+$font-regular: 'Work Sans',
+sans-serif;
+
+
+input, select {
+  border: 1px solid #DDD;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-family: $font-regular;
+  color: $color-dark;
+
+  &:focus {
+    border: 1px solid $color-action;
+    outline-width: 0px;
+  }
+}
+
+input[type=submit] {
+  background-color: $color-action;
+  color: white;
+  cursor: pointer;
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+textarea {
+  border: 1px solid #EDEDED;
+  padding: 10px;
+  padding-top: 9px;
+  padding-bottom: 5px;
+  outline: none;
+  height: 35px;
+  font-size: 14px;
+  font-family: $font-regular;
+  color: $color-dark;
+
+  &:focus {
+    box-shadow: 0 0 0 1px $color-action;
+  }
+}
+
+.radio, .check {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 0 8px;
+    input {
+        float: left;
+        width: 20px;
+        height: 35px;
+        padding: 0 10px;
+        text-align: center;
+    }
+    label {
+        padding: 10px 0 0 16px;
+        float: left;
+    }
+    font-size: 14px;
+}
